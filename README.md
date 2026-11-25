@@ -52,6 +52,8 @@ The aggregate and the day-level view are computed by separate modules so they ca
 
 The second row is the whole problem: averaging over the ten-day window dilutes a concentrated peak until the aggregate reports almost none of the real over-allocation. See `experiments/exp_aggregation_window.py`.
 
+![Line chart, log x axis: over-allocation the aggregate can see falls from 20.6 person-days at a one-day window to 1.0 at the ten-day sprint and to zero at wider windows](docs/img/aggregation_window.png)
+
 ## It is concurrency, not rounding
 
 If the finding were noise, a small tolerance would erase it. It does not: even allowing 125% days (a tolerance of a quarter FTE), **1.85 hidden person-days remain** across three people.

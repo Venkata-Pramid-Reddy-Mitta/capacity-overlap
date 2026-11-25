@@ -33,6 +33,7 @@ generate:
 # Evidence needs the optional [evidence] extra and a Chromium; it is not required for verify.
 evidence:
 	$(PY) tools/render_diagrams.py
+	$(PY) tools/render_chart.py
 	$(PY) tools/capture_screenshots.py
 	$(PY) tools/record_demo.py
 
