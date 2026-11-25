@@ -37,13 +37,17 @@ def main() -> int:
     ax.grid(True, which="both", linewidth=0.4, alpha=0.5)
     ax.annotate(
         f"daily view: {payload['daily_over_person_days']} person-days (the truth)",
-        xy=(windows[0], seen[0]), xytext=(1.4, seen[0] - 2.5),
-        fontsize=9, color="#333",
+        xy=(windows[0], seen[0]),
+        xytext=(1.4, seen[0] - 2.5),
+        fontsize=9,
+        color="#333",
     )
     ax.annotate(
         f"10-day sprint: {payload['sprint_over_person_days']}",
-        xy=(10, payload["sprint_over_person_days"]), xytext=(11, 6),
-        fontsize=9, color="#b42318",
+        xy=(10, payload["sprint_over_person_days"]),
+        xytext=(11, 6),
+        fontsize=9,
+        color="#b42318",
         arrowprops={"arrowstyle": "->", "color": "#b42318"},
     )
     fig.tight_layout()
