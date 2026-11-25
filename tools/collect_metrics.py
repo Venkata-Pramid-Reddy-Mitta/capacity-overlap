@@ -33,7 +33,7 @@ ANCHORS = {
     "workstreams_total": ["{} workstreams"],
     "sprints_total": ["{} sprints"],
     "horizon_working_days": ["{} working days"],
-    "hidden_over_person_days": ["{} hidden person-days"],
+    "hidden_over_person_days": ["{} hidden person-days of"],
     "total_over_person_days": ["{} person-days in total"],
     "hidden_share_pct": ["{}% of it invisible"],
     "green_conflicted_pairs": ["{} person-sprint pairs"],

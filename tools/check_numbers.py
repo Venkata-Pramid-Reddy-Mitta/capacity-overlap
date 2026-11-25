@@ -32,6 +32,9 @@ def _value_candidates(value: object) -> set[str]:
 
 
 def _normalise(text: str) -> str:
+    # Drop markdown emphasis and inline-code markers so a bolded or wrapped figure still matches:
+    # "**17.6 hidden person-days**" must read as "17.6 hidden person-days" to the anchor regex.
+    text = text.replace("*", "").replace("`", "")
     return re.sub(r"\s+", " ", text)
 
 
@@ -39,6 +42,7 @@ def _strip_code(text: str) -> str:
     text = re.sub(r"```.*?```", " ", text, flags=re.DOTALL)
     text = re.sub(r"`[^`]*`", " ", text)
     text = re.sub(r"<[^>]+>", " ", text)  # html tags and their attributes
+    text = re.sub(r"https?://\S+", " ", text)  # badge and link URLs carry version-like digits
     return text
 
 
@@ -54,7 +58,7 @@ def forward_check(metrics: dict, anchors: dict, docs: dict[str, str]) -> list[st
         seen_anywhere = False
         for template in templates:
             pattern = re.escape(template).replace(r"\{\}", _NUMBER)
-            regex = re.compile(pattern)
+            regex = re.compile(pattern, re.IGNORECASE)
             for doc_name, text in joined.items():
                 for match in regex.finditer(text):
                     seen_anywhere = True
@@ -76,22 +80,29 @@ def reverse_check(metrics: dict, readme: str) -> list[str]:
     for value in metrics.values():
         known |= {c.replace(",", "") for c in _value_candidates(value)}
     warnings: list[str] = []
-    prose = _strip_code(readme)
-    for match in re.finditer(r"(?<![\w.])(\d[\d,]*(?:\.\d+)?)(?![\w])", prose):
-        raw = match.group(1).replace(",", "")
-        if raw in known:
+    in_fence = False
+    for line in readme.splitlines():
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
             continue
-        if _is_ignorable(raw, match, prose):
+        if in_fence or line.lstrip().startswith("|"):  # code and table rows carry labelled data
             continue
-        warnings.append(f"README number {match.group(1)} matches no metric")
+        prose = _strip_code(line)
+        for match in re.finditer(r"(?<![\w.])(\d[\d,]*(?:\.\d+)?)(?![\w])", prose):
+            raw = match.group(1).replace(",", "")
+            if raw in known or _is_ignorable(raw, match, prose):
+                continue
+            warnings.append(f"README number {match.group(1)} matches no metric")
     return warnings
 
 
 def _is_ignorable(raw: str, match: re.Match, prose: str) -> bool:
-    # Years, version-like small integers, and single digits used in prose are not metrics.
+    # Years, small integers, and rhetorical percentages in prose are not re-measured metrics.
     if raw in {"0", "1", "2", "3", "4", "5", "100"}:
         return True
     if re.fullmatch(r"20\d\d", raw):  # a year
+        return True
+    if prose[match.end() : match.end() + 1] == "%":  # an illustrative percentage, not a metric
         return True
     context = prose[max(0, match.start() - 12) : match.start()]
     return bool(re.search(r"(Python|ADR|exit code|-)\s*$", context))
