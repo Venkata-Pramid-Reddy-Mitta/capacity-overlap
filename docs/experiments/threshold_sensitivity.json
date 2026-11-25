@@ -1,0 +1,39 @@
+{
+  "experiment": "threshold_sensitivity",
+  "question": "how much hidden over-allocation survives a growing tolerance",
+  "strict_hidden_over_person_days": 17.6,
+  "hidden_at_quarter_fte_tolerance": 1.85,
+  "people_at_quarter_fte_tolerance": 3,
+  "rows": [
+    {
+      "tolerance": 0.0,
+      "hidden_over_person_days": 17.6,
+      "people_conflicted_while_green": 16,
+      "green_conflicted_pairs": 25
+    },
+    {
+      "tolerance": 0.05,
+      "hidden_over_person_days": 13.8,
+      "people_conflicted_while_green": 16,
+      "green_conflicted_pairs": 25
+    },
+    {
+      "tolerance": 0.1,
+      "hidden_over_person_days": 10.0,
+      "people_conflicted_while_green": 14,
+      "green_conflicted_pairs": 19
+    },
+    {
+      "tolerance": 0.25,
+      "hidden_over_person_days": 1.85,
+      "people_conflicted_while_green": 3,
+      "green_conflicted_pairs": 5
+    },
+    {
+      "tolerance": 0.5,
+      "hidden_over_person_days": 0,
+      "people_conflicted_while_green": 0,
+      "green_conflicted_pairs": 0
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "experiment": "workstream_attribution",
+  "question": "which workstream combinations the hidden over-allocation comes from",
+  "combinations": 6,
+  "cross_workstream_over_person_days": 17.6,
+  "hidden_over_person_days": 17.6,
+  "top_combination": {
+    "workstreams": [
+      "cloud-migration",
+      "data-migration"
+    ],
+    "pair_size": 2,
+    "over_person_days": 6.5,
+    "clash_days": 22
+  },
+  "rows": [
+    {
+      "workstreams": [
+        "cloud-migration",
+        "data-migration"
+      ],
+      "pair_size": 2,
+      "over_person_days": 6.5,
+      "clash_days": 22
+    },
+    {
+      "workstreams": [
+        "app-modernization",
+        "cloud-migration"
+      ],
+      "pair_size": 2,
+      "over_person_days": 3.2,
+      "clash_days": 14
+    },
+    {
+      "workstreams": [
+        "app-modernization",
+        "testing-deployment"
+      ],
+      "pair_size": 2,
+      "over_person_days": 2.85,
+      "clash_days": 13
+    },
+    {
+      "workstreams": [
+        "app-modernization",
+        "data-migration"
+      ],
+      "pair_size": 2,
+      "over_person_days": 2.55,
+      "clash_days": 15
+    },
+    {
+      "workstreams": [
+        "cloud-migration",
+        "testing-deployment"
+      ],
+      "pair_size": 2,
+      "over_person_days": 2.3,
+      "clash_days": 10
+    },
+    {
+      "workstreams": [
+        "data-migration",
+        "testing-deployment"
+      ],
+      "pair_size": 2,
+      "over_person_days": 0.2,
+      "clash_days": 2
+    }
+  ]
+}

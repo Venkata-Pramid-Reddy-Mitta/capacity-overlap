@@ -1,0 +1,39 @@
+{
+  "experiment": "aggregation_window",
+  "question": "how much over-allocation each reporting window can still see",
+  "horizon_working_days": 60,
+  "daily_over_person_days": 20.6,
+  "sprint_over_person_days": 1.0,
+  "rows": [
+    {
+      "window_working_days": 1,
+      "aggregate_over_person_days": 20.6,
+      "hidden_vs_daily": 0.0
+    },
+    {
+      "window_working_days": 2,
+      "aggregate_over_person_days": 16.5,
+      "hidden_vs_daily": 4.1
+    },
+    {
+      "window_working_days": 5,
+      "aggregate_over_person_days": 8.65,
+      "hidden_vs_daily": 11.95
+    },
+    {
+      "window_working_days": 10,
+      "aggregate_over_person_days": 1.0,
+      "hidden_vs_daily": 19.6
+    },
+    {
+      "window_working_days": 20,
+      "aggregate_over_person_days": 0.0,
+      "hidden_vs_daily": 20.6
+    },
+    {
+      "window_working_days": 60,
+      "aggregate_over_person_days": 0.0,
+      "hidden_vs_daily": 20.6
+    }
+  ]
+}

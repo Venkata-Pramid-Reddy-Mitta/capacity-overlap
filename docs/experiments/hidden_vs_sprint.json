@@ -1,0 +1,262 @@
+{
+  "experiment": "hidden_vs_sprint",
+  "question": "how far does a healthy sprint bar sit from the worst day underneath it",
+  "hidden_over_person_days": 17.6,
+  "total_over_person_days": 20.6,
+  "hidden_share_pct": 85.4,
+  "green_conflicted_pairs": 25,
+  "people_conflicted_while_green": 16,
+  "max_gap_pct": 90.0,
+  "findings": [
+    {
+      "person_id": "p07",
+      "person_name": "G. Delgado",
+      "sprint": 3,
+      "sprint_util_pct": 100.0,
+      "peak_day_pct": 140.0,
+      "gap_pct": 40.0,
+      "over_person_days": 2.4,
+      "clash_days": 6
+    },
+    {
+      "person_id": "p07",
+      "person_name": "G. Delgado",
+      "sprint": 2,
+      "sprint_util_pct": 50.0,
+      "peak_day_pct": 140.0,
+      "gap_pct": 90.0,
+      "over_person_days": 0.4,
+      "clash_days": 1
+    },
+    {
+      "person_id": "p11",
+      "person_name": "L. Kovac",
+      "sprint": 5,
+      "sprint_util_pct": 90.0,
+      "peak_day_pct": 135.0,
+      "gap_pct": 45.0,
+      "over_person_days": 1.4,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p15",
+      "person_name": "R. Yamada",
+      "sprint": 5,
+      "sprint_util_pct": 82.5,
+      "peak_day_pct": 135.0,
+      "gap_pct": 52.5,
+      "over_person_days": 1.05,
+      "clash_days": 3
+    },
+    {
+      "person_id": "p15",
+      "person_name": "R. Yamada",
+      "sprint": 4,
+      "sprint_util_pct": 67.5,
+      "peak_day_pct": 135.0,
+      "gap_pct": 67.5,
+      "over_person_days": 0.35,
+      "clash_days": 1
+    },
+    {
+      "person_id": "p02",
+      "person_name": "B. Okafor",
+      "sprint": 5,
+      "sprint_util_pct": 95.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 30.0,
+      "over_person_days": 1.5,
+      "clash_days": 6
+    },
+    {
+      "person_id": "p04",
+      "person_name": "D. Haddad",
+      "sprint": 3,
+      "sprint_util_pct": 95.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 30.0,
+      "over_person_days": 1.5,
+      "clash_days": 6
+    },
+    {
+      "person_id": "p14",
+      "person_name": "P. Abbasi",
+      "sprint": 4,
+      "sprint_util_pct": 87.5,
+      "peak_day_pct": 125.0,
+      "gap_pct": 37.5,
+      "over_person_days": 1.25,
+      "clash_days": 5
+    },
+    {
+      "person_id": "p22",
+      "person_name": "C. Silva",
+      "sprint": 5,
+      "sprint_util_pct": 80.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 45.0,
+      "over_person_days": 1.0,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p24",
+      "person_name": "E. Berg",
+      "sprint": 4,
+      "sprint_util_pct": 80.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 45.0,
+      "over_person_days": 1.0,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p06",
+      "person_name": "F. Mehta",
+      "sprint": 1,
+      "sprint_util_pct": 72.5,
+      "peak_day_pct": 125.0,
+      "gap_pct": 52.5,
+      "over_person_days": 0.75,
+      "clash_days": 3
+    },
+    {
+      "person_id": "p08",
+      "person_name": "H. Osei",
+      "sprint": 5,
+      "sprint_util_pct": 65.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 60.0,
+      "over_person_days": 0.5,
+      "clash_days": 2
+    },
+    {
+      "person_id": "p22",
+      "person_name": "C. Silva",
+      "sprint": 6,
+      "sprint_util_pct": 65.0,
+      "peak_day_pct": 125.0,
+      "gap_pct": 60.0,
+      "over_person_days": 0.5,
+      "clash_days": 2
+    },
+    {
+      "person_id": "p14",
+      "person_name": "P. Abbasi",
+      "sprint": 3,
+      "sprint_util_pct": 57.5,
+      "peak_day_pct": 125.0,
+      "gap_pct": 67.5,
+      "over_person_days": 0.25,
+      "clash_days": 1
+    },
+    {
+      "person_id": "p05",
+      "person_name": "E. Larsson",
+      "sprint": 3,
+      "sprint_util_pct": 84.0,
+      "peak_day_pct": 120.0,
+      "gap_pct": 36.0,
+      "over_person_days": 0.8,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p20",
+      "person_name": "A. Khan",
+      "sprint": 1,
+      "sprint_util_pct": 72.0,
+      "peak_day_pct": 120.0,
+      "gap_pct": 48.0,
+      "over_person_days": 0.4,
+      "clash_days": 2
+    },
+    {
+      "person_id": "p13",
+      "person_name": "N. Petrov",
+      "sprint": 3,
+      "sprint_util_pct": 66.0,
+      "peak_day_pct": 120.0,
+      "gap_pct": 54.0,
+      "over_person_days": 0.2,
+      "clash_days": 1
+    },
+    {
+      "person_id": "p13",
+      "person_name": "N. Petrov",
+      "sprint": 4,
+      "sprint_util_pct": 66.0,
+      "peak_day_pct": 120.0,
+      "gap_pct": 54.0,
+      "over_person_days": 0.2,
+      "clash_days": 1
+    },
+    {
+      "person_id": "p18",
+      "person_name": "V. Novak",
+      "sprint": 6,
+      "sprint_util_pct": 62.5,
+      "peak_day_pct": 115.0,
+      "gap_pct": 52.5,
+      "over_person_days": 0.45,
+      "clash_days": 3
+    },
+    {
+      "person_id": "p06",
+      "person_name": "F. Mehta",
+      "sprint": 3,
+      "sprint_util_pct": 74.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 36.0,
+      "over_person_days": 0.4,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p26",
+      "person_name": "G. Costa",
+      "sprint": 1,
+      "sprint_util_pct": 80.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 30.0,
+      "over_person_days": 0.4,
+      "clash_days": 4
+    },
+    {
+      "person_id": "p05",
+      "person_name": "E. Larsson",
+      "sprint": 4,
+      "sprint_util_pct": 75.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 35.0,
+      "over_person_days": 0.3,
+      "clash_days": 3
+    },
+    {
+      "person_id": "p15",
+      "person_name": "R. Yamada",
+      "sprint": 1,
+      "sprint_util_pct": 70.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 40.0,
+      "over_person_days": 0.2,
+      "clash_days": 2
+    },
+    {
+      "person_id": "p23",
+      "person_name": "D. Tran",
+      "sprint": 1,
+      "sprint_util_pct": 70.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 40.0,
+      "over_person_days": 0.2,
+      "clash_days": 2
+    },
+    {
+      "person_id": "p24",
+      "person_name": "E. Berg",
+      "sprint": 3,
+      "sprint_util_pct": 62.0,
+      "peak_day_pct": 110.0,
+      "gap_pct": 48.0,
+      "over_person_days": 0.2,
+      "clash_days": 2
+    }
+  ]
+}
