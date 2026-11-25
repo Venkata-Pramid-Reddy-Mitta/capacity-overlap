@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>capacity-overlap report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; color: #1a1a1a;
+         background: #ffffff; margin: 0; padding: 32px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: #555; margin: 0 0 20px; font-size: 13px; }
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 4px; font-weight: 700;
+            font-size: 13px; letter-spacing: .4px; color: #ffffff; }
+  .badge-fail { background: #b42318; }
+  .badge-pass { background: #067647; }
+  .cards { display: flex; gap: 16px; margin: 20px 0 8px; flex-wrap: wrap; }
+  .card { border: 1px solid #e3e3e3; border-radius: 8px; padding: 14px 18px; min-width: 150px; }
+  .card .n { font-size: 26px; font-weight: 700; }
+  .card .l { font-size: 12px; color: #555; margin-top: 2px; }
+  .card.head .n { color: #b42318; }
+  table { border-collapse: collapse; width: 100%; margin-top: 18px; font-size: 13px; }
+  th, td { border-bottom: 1px solid #ececec; padding: 7px 10px; text-align: left; }
+  th { background: #f6f6f6; font-size: 12px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.peak { font-weight: 700; color: #b42318; }
+  h2 { font-size: 15px; margin: 24px 0 2px; }
+</style></head>
+<body>
+  <h1>capacity-overlap</h1>
+  <p class="sub">day-level over-allocation hidden under a sprint utilization view
+    of 26 people</p>
+  <span class="badge badge-fail">HIDDEN OVER-ALLOCATION</span>
+  <div class="cards">
+    <div class="card head"><div class="n">17.6</div>
+      <div class="l">hidden person-days</div></div>
+    <div class="card"><div class="n">25</div>
+      <div class="l">green person-sprint pairs with a clash</div></div>
+    <div class="card"><div class="n">16</div>
+      <div class="l">people called healthy</div></div>
+    <div class="card"><div class="n">85.4%</div>
+      <div class="l">of all over-allocation invisible</div></div>
+    <div class="card"><div class="n">174</div>
+      <div class="l">reschedulable slack days</div></div>
+  </div>
+  <p class="sub">total over-allocation across the plan: 20.6 person-days</p>
+  <h2>The people a sprint bar shows as at or below 100%</h2>
+  <table>
+    <thead><tr><th>person</th><th>sprint</th><th>sprint util</th><th>peak day</th>
+      <th>over person-days</th><th>clash days</th></tr></thead>
+    <tbody><tr><td>G. Delgado (p07)</td><td class='num'>3</td><td class='num'>100.0%</td><td class='num peak'>140.0%</td><td class='num'>2.4</td><td>2026-05-11, 2026-05-12, 2026-05-13, 2026-05-14, 2026-05-15, 2026-05-18</td></tr><tr><td>G. Delgado (p07)</td><td class='num'>2</td><td class='num'>50.0%</td><td class='num peak'>140.0%</td><td class='num'>0.4</td><td>2026-05-08</td></tr><tr><td>L. Kovac (p11)</td><td class='num'>5</td><td class='num'>90.0%</td><td class='num peak'>135.0%</td><td class='num'>1.4</td><td>2026-06-11, 2026-06-12, 2026-06-15, 2026-06-16</td></tr><tr><td>R. Yamada (p15)</td><td class='num'>5</td><td class='num'>82.5%</td><td class='num peak'>135.0%</td><td class='num'>1.05</td><td>2026-06-08, 2026-06-09, 2026-06-10</td></tr><tr><td>R. Yamada (p15)</td><td class='num'>4</td><td class='num'>67.5%</td><td class='num peak'>135.0%</td><td class='num'>0.35</td><td>2026-06-05</td></tr><tr><td>B. Okafor (p02)</td><td class='num'>5</td><td class='num'>95.0%</td><td class='num peak'>125.0%</td><td class='num'>1.5</td><td>2026-06-09, 2026-06-10, 2026-06-11, 2026-06-12, 2026-06-15, 2026-06-16</td></tr><tr><td>D. Haddad (p04)</td><td class='num'>3</td><td class='num'>95.0%</td><td class='num peak'>125.0%</td><td class='num'>1.5</td><td>2026-05-15, 2026-05-18, 2026-05-19, 2026-05-20, 2026-05-21, 2026-05-22</td></tr><tr><td>P. Abbasi (p14)</td><td class='num'>4</td><td class='num'>87.5%</td><td class='num peak'>125.0%</td><td class='num'>1.25</td><td>2026-05-25, 2026-05-26, 2026-05-27, 2026-05-28, 2026-05-29</td></tr><tr><td>C. Silva (p22)</td><td class='num'>5</td><td class='num'>80.0%</td><td class='num peak'>125.0%</td><td class='num'>1.0</td><td>2026-06-16, 2026-06-17, 2026-06-18, 2026-06-19</td></tr><tr><td>E. Berg (p24)</td><td class='num'>4</td><td class='num'>80.0%</td><td class='num peak'>125.0%</td><td class='num'>1.0</td><td>2026-05-29, 2026-06-01, 2026-06-02, 2026-06-03</td></tr><tr><td>F. Mehta (p06)</td><td class='num'>1</td><td class='num'>72.5%</td><td class='num peak'>125.0%</td><td class='num'>0.75</td><td>2026-04-17, 2026-04-20, 2026-04-21</td></tr><tr><td>H. Osei (p08)</td><td class='num'>5</td><td class='num'>65.0%</td><td class='num peak'>125.0%</td><td class='num'>0.5</td><td>2026-06-16, 2026-06-17</td></tr></tbody>
+  </table>
+</body></html>

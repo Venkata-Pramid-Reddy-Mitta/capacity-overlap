@@ -1,0 +1,11 @@
+{
+  "image": "report.png",
+  "source": "render_html on data/plan.csv (capacity 1.0, tolerance 0.0)",
+  "badge": {
+    "color": "rgb(255, 255, 255)",
+    "background": "rgb(180, 35, 24)",
+    "w": 215,
+    "h": 28
+  },
+  "note": "regenerate with: python tools/capture_screenshots.py"
+}

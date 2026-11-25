@@ -1,0 +1,35 @@
+{
+  "note": "replay of captured stdout; every line is real output, paced by wall time",
+  "segments": [
+    {
+      "command": "capacity-overlap analyze data/plan.csv",
+      "output": "capacity-overlap report\n================================================\npeople: 26   workstreams: 4   sprints: 6   working days: 60\ncapacity: 1.0 FTE   tolerance: 0.0\n\nHIDDEN over-allocation: 17.6 person-days\n  across 25 person-sprint pairs that read at or below 100%,\n  affecting 16 people the sprint view calls healthy.\ntotal over-allocation: 20.6 person-days (85.4% of it invisible at sprint level)\nreschedulable slack in those same sprints: 174 days\n\nworst hidden case:\n  G. Delgado (p07), sprint 3: sprint reads 100.0%, peaks at 140.0% on a single day\n  clash days: 2026-05-11, 2026-05-12, 2026-05-13, 2026-05-14, 2026-05-15, 2026-05-18\n\nFAIL: hidden over-allocation present",
+      "exit_code": 2,
+      "duration_s": 0.394
+    },
+    {
+      "command": "python experiments/exp_aggregation_window.py",
+      "output": "\naggregation_window: how much over-allocation each reporting window can still see\n\n window (wd) aggregate OA   hidden vs daily\n-------------------------------------------\n           1         20.6               0.0\n           2         16.5               4.1\n           5         8.65             11.95\n          10          1.0              19.6\n          20          0.0              20.6\n          60          0.0              20.6\n\nat 1 working day the view sees 20.6 person-days; at the 10-day sprint it sees 1.0",
+      "exit_code": 0,
+      "duration_s": 0.355
+    },
+    {
+      "command": "python experiments/exp_threshold_sensitivity.py",
+      "output": "\nthreshold_sensitivity: how much hidden over-allocation survives a growing tolerance\n\n tolerance   hidden OA   people   pairs\n---------------------------------------\n       0.0        17.6       16      25\n      0.05        13.8       16      25\n       0.1        10.0       14      19\n      0.25        1.85        3       5\n       0.5           0        0       0\n\neven allowing 125% days (tolerance 0.25), 1.85 hidden person-days remain across 3 people",
+      "exit_code": 0,
+      "duration_s": 0.372
+    },
+    {
+      "command": "capacity-overlap analyze data/plan.csv --tolerance 0.5 --quiet; echo exit $?",
+      "output": "exit 0",
+      "exit_code": 0,
+      "duration_s": 0.344
+    },
+    {
+      "command": "python tools/check_numbers.py",
+      "output": "checked document missing: README.md",
+      "exit_code": 2,
+      "duration_s": 0.028
+    }
+  ]
+}

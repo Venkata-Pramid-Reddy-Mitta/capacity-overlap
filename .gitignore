@@ -11,6 +11,5 @@ junit.xml
 reports/
 .venv/
 venv/
-# Generated evidence binaries are rebuilt by tools/; keep the SVG and manifests, not the heavy files.
+# The raw screen-capture webm is heavy and regenerable; the committed GIF and MP4 are the evidence.
 docs/video/*.webm
-docs/video/*.mp4
