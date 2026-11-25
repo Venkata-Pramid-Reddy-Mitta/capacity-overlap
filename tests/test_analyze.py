@@ -105,8 +105,14 @@ def test_hidden_share_is_the_hidden_fraction_of_total():
 
 
 def test_reschedulable_slack_counts_below_capacity_days_in_hidden_sprints():
-    # base 0.5 (below capacity) for 5 days, one day pushed to 1.25 by a pull.
-    # The clash day is at capacity-or-over, the other four are slack.
+    """Pins the fix for the war-story bug (docs/war-story.md).
+
+    The first version of this metric counted fully idle days (zero load) and read a structural
+    zero on every plan, because the generator gives everyone a horizon-long baseline so no day is
+    ever fully idle. The metric now counts days strictly below capacity, the room a clash could
+    move into. Here the baseline is 0.5 on five days and one day is pushed to 1.25 by a pull: the
+    clash day is at or over capacity, the other four are slack, so the answer is four, not zero.
+    """
     result = analyze_assignments(
         a(task="base", alloc=0.5),
         a(task="pull", start=WED, end=WED, ws="data-migration", alloc=0.75),

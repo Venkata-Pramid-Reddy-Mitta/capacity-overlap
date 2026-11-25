@@ -22,6 +22,7 @@ On a seeded plan of 26 people across four workstreams over six sprints:
 - **17.6 hidden person-days** of over-allocation, across **25 person-sprint pairs** that read at or below 100%, affecting **16 people the sprint view** calls healthy.
 - That is **85.4% of it invisible** at the sprint level: of 20.6 person-days in total, only three are visible as a utilization above 100%.
 - The worst case **reads 100.0% for the sprint** and **peaks at 140%** on a single day. Another sprint for the same person shows **a 90-point gap**: it sits at 50% across the sprint while that person hits 140% on one day.
+- Where the tool is weakest, stated up front: most of that 17.6 is light double-booking. Allow a quarter-FTE of slack and only **1.85 hidden person-days remain** across three people. The signal is real, but its severity is a distribution, not a single alarming headline, and the result rests entirely on the plan's declared allocations being accurate (ADR-003).
 
 Every figure in this document is re-measured from the code by CI: the analysis runs on a committed fixture, the test suite reports **124 tests** at **100% line coverage**, and a number checker fails the build if any figure here drifts from what the code produces.
 
