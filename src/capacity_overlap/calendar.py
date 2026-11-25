@@ -31,8 +31,8 @@ def working_days(start: date, end: date) -> list[date]:
     """Inclusive list of working days from start to end.
 
     Inclusive of both ends on purpose: a task assigned 'start to end' is worked on its end day.
-    An exclusive end was the first real bug in this build (see docs/war-story.md); it dropped the
-    final working day of every task and quietly lowered the over-allocation count.
+    An exclusive end would silently drop the final working day of every task and lower the
+    over-allocation count, so the inclusivity is pinned by a test rather than left to a reader.
     """
     if end < start:
         return []
