@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capacity-overlap"
+version = "0.1.0"
+description = "Finds the person-days of over-allocation that a sprint-level utilization view hides."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Venkata Pramid Reddy Mitta" }]
+dependencies = [
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "coverage>=7.0",
+    "ruff>=0.6",
+    "matplotlib>=3.7",
+]
+evidence = [
+    "playwright>=1.40",
+    "cmarkgfm>=2024.1.14",
+]
+
+[project.scripts]
+capacity-overlap = "capacity_overlap.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["capacity_overlap"]
+
+[tool.coverage.report]
+show_missing = true

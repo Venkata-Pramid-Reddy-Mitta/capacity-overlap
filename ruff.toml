@@ -1,0 +1,13 @@
+# Line length chosen at 100: wide enough for the daily-load comprehensions in overlap.py
+# to stay on one line, narrow enough to read two files side by side in review.
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+# B008 would flag argparse defaults built at call time; the CLI relies on them intentionally.
+ignore = ["B008"]
+
+[lint.per-file-ignores]
+# Tests read better when a long property name is the whole function name.
+"tests/*" = ["E501"]
