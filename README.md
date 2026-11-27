@@ -2,7 +2,7 @@
 
 **Finds the person-days of over-allocation that a sprint utilization view hides, by rebuilding each person's load one working day at a time instead of averaging it across the sprint.**
 
-[![CI](https://github.com/OWNER/capacity-overlap/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/capacity-overlap/actions/workflows/ci.yml)
+[![CI](https://github.com/Venkata-Pramid-Reddy-Mitta/capacity-overlap/actions/workflows/ci.yml/badge.svg)](https://github.com/Venkata-Pramid-Reddy-Mitta/capacity-overlap/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
