@@ -18,9 +18,9 @@ over-allocation. A check that always fails on real data gets disabled within a w
 
 Three exit codes:
 
-- `0`: analysed, no hidden over-allocation.
-- `2`: analysed, hidden over-allocation found. The gate fails here, deliberately a distinct code.
-- `3`: could not analyse (bad arguments, missing or malformed plan). Every input problem maps to this
+- `0`: analyzed, no hidden over-allocation.
+- `2`: analyzed, hidden over-allocation found. The gate fails here, deliberately a distinct code.
+- `3`: could not analyze (bad arguments, missing or malformed plan). Every input problem maps to this
   one class via `PlanError`.
 
 The strictness is tunable through `--tolerance`, not hard-coded. The default tolerance is zero, so the

@@ -17,11 +17,11 @@ tool measures the plan's internal contradiction: a plan that commits a person ov
 is self-inconsistent regardless of what was later worked.
 
 Also treat each task's allocation as uniform across its working days. A ramp-up or a crunch at the
-end of a task is not modelled.
+end of a task is not modeled.
 
 ## Consequences
 
-- The result is fully offline and reproducible from one committed artefact, with no feed to trust or
+- The result is fully offline and reproducible from one committed artifact, with no feed to trust or
   mock and no credentials. This is worth more for a portfolio reviewer than realism would be: every
   number is reproducible with one command.
 - A 50% allocation that was really worked at 90% is invisible. The tool does not claim to find real

@@ -29,7 +29,7 @@ are not.
 Command: `python experiments/exp_aggregation_window.py`.
 A daily view sees 20.6 person-days of over-allocation; the sprint reports 1.0. The gap is what the
 window hides, and it grows monotonically as the window widens.
-If pushed ("is that an artefact of your window choice?"): the experiment sweeps windows from one
+If pushed ("is that an artifact of your window choice?"): the experiment sweeps windows from one
 working day to the whole horizon; the effect is monotone, so there is nothing special about ten days
 except that it is the common sprint length.
 
@@ -47,7 +47,7 @@ figure in the README or this guide drifts from the code.
 
 **"Isn't this just a pandas groupby with extra steps?"**
 pandas reads the CSV and nothing else. The core (`overlap`, `analyze`) is plain Python and never
-imports pandas. The work is the day-level materialisation and the reconciliation against the
+imports pandas. The work is the day-level materialization and the reconciliation against the
 aggregate, which is not a groupby; a groupby over the sprint is exactly the flawed view I am arguing
 with.
 

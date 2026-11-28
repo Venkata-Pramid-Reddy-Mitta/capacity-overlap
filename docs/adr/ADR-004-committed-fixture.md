@@ -16,7 +16,7 @@ machine, across Python versions and platforms.
 Commit the generated plan as `data/plan.csv`, and keep the seeded generator (`make generate`) for
 regenerating it. `make verify` reads the committed fixture; it does not regenerate it. The generator
 is driven entirely by one `random.Random(seed)` and sorts its rows before writing, so regeneration is
-byte-for-byte stable, but the committed file is the artefact of record.
+byte-for-byte stable, but the committed file is the artifact of record.
 
 ## Consequences
 

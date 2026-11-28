@@ -19,7 +19,7 @@ smooths away.
 
 ## Decision
 
-Materialise a per-person, per-working-day load by summing every assignment active on each day, and
+Materialize a per-person, per-working-day load by summing every assignment active on each day, and
 derive over-allocation from that. The accumulation is the overlap detection: two assignments
 contribute to the same day exactly when their inclusive date ranges share a working day.
 
@@ -27,7 +27,7 @@ contribute to the same day exactly when their inclusive date ranges share a work
 
 - Memory and time are proportional to people times horizon working days. For a plan of dozens of
   people over a few months this is trivial; for ten thousand people over five years it would need a
-  sweep over interval endpoints rather than a per-day materialisation. The Pivot notes the trigger.
+  sweep over interval endpoints rather than a per-day materialization. The Pivot notes the trigger.
 - The day-indexed load is directly inspectable, so the report can show the exact clash days, which is
   what makes the finding actionable rather than a flag.
 - The aggregate is still computed, in `sprintview`, precisely so the two can be set against each
